@@ -2,10 +2,10 @@
   --black: black;
   --light-grey: #f4f4f4;
   --white: white;
+  --gray: #6d6d6d;
   --ff8569: var(--ui);
   --ai: #5e5ce6;
   --studio: #34c759;
-  --gray: #999;
   --ui: #ff8569;
 }
 
@@ -1429,6 +1429,10 @@ figcaption {
   font-size: 6rem;
 }
 
+.layout424_heading.heading-4, .layout424_heading.heading-1, .layout424_heading.heading-2, .layout424_heading.heading-3 {
+  font-family: Calsans, sans-serif;
+}
+
 .layout424_instructions-list-item {
   padding-left: .5rem;
 }
@@ -1455,6 +1459,7 @@ figcaption {
 }
 
 .text-weight-semibold {
+  color: var(--gray);
   text-transform: lowercase;
   font-family: Calsans, sans-serif;
   font-weight: 600;
@@ -1462,7 +1467,9 @@ figcaption {
 
 .spacer-xsmall-2 {
   width: 100%;
+  justify-content: center;
   padding-top: 1rem;
+  display: flex;
 }
 
 .spacer-small-2 {
@@ -1519,6 +1526,72 @@ figcaption {
 
 .text-span-4 {
   color: var(--gray);
+}
+
+.button-wrapper-icon {
+  max-width: 1000px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-direction: row;
+  flex: 0 auto;
+  grid-template-rows: auto;
+  grid-template-columns: 1.25fr 1.25fr;
+  grid-auto-columns: 1fr;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 12px;
+  margin-right: 12px;
+  display: grid;
+  position: relative;
+}
+
+.top-bar-item {
+  cursor: none;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 18px;
+  display: flex;
+  position: relative;
+}
+
+.icon-3 {
+  z-index: 1;
+  width: 20px;
+  position: relative;
+}
+
+.text-block-3 {
+  z-index: 10;
+  font-family: Calsans, sans-serif;
+  text-decoration: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: auto;
+}
+
+.text-block-4 {
+  z-index: 10;
+  font-family: Calsans, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.button-bg {
+  width: 50%;
+  background-color: #e8e9eb;
+  border-radius: 8px;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 @media screen and (max-width: 991px) {
@@ -1719,6 +1792,10 @@ figcaption {
 
   .layout424_content {
     height: 100svh;
+  }
+
+  .button-wrapper-icon {
+    display: none;
   }
 }
 
